@@ -1,0 +1,32 @@
+// salarios.cpp : Defines the entry point for the console application.
+//
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include "stdlib.h"
+
+using namespace std;
+
+int main(int argo, char argv[])
+{       int i, n;
+        float salario, aux, neto, iva;
+		cout<<"programa para calcular el salario neto de n trabajadores"<<endl;
+		cout<<"digite el auxilio de transporte"<<endl;
+		cin>>n;
+		for(i=1; i<=n; i++);
+		   {cout<<"digite el salario basico del trabajador"<<endl;
+		    cin>>salario;
+			cout<<"digite el auxilio de transporte"<<endl;
+			cin>>aux;
+			cout<<"digite el valor de impuesto"<<endl;
+			cin>>iva;
+			neto=salario+aux-iva;
+			cout<<"elsalario neto es:"<<neto<<endl;
+		   }
+		system("PAUSE");
+		getch();
+}
