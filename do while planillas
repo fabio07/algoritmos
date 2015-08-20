@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include "conio.h"
+#include "stdlib.h"
+#include <iostream>
+
+using namespace std;
+
+void main ()
+{int N,SM=1420,i=0;
+ float SB,SN,Suma,Promedio;
+ char s,resp;
+ Suma=0;
+ 
+ do
+   { cout<<"Ingrese el salario bruto del trabajador:(-999 para terminar)";
+     cin>>SB;
+	 if (SB>15000)
+	     SN=SB-(SB*0.121)-(SB*0.13)-(SB*0.01);
+	 else
+		{if(SB>(2*SM))
+	     SN=SB-(SB*0.121)-(SB*0.13);    
+		 else
+		 SN=SB-(SB*0.121);
+	    }
+	 Suma=Suma+SN;
+	 i++;
+	 cout<<"Desea continuar:(s para continuar)";
+     cin>>resp;
+    }while (resp=='s');
+ Promedio=Suma/i;
+ cout<<"El Promedio de los sueldos netos es:"<<Promedio;
+ getch();
+}
