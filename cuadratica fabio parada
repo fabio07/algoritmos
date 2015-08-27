@@ -1,0 +1,40 @@
+// cuadratica.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+ 
+using namespace std;
+
+void main ()
+{   float a,b,c,im_x1, im_x2,re_x1, re_x2;
+    cout<<"la ecuacion es de la formas: f(x) = ax^2 + bx + c" << endl;
+    cout << "entre a: " << endl;
+	  cin >> a;
+	  cout << "entre b: " << endl;
+	  cin >> b;
+	  cout << "entre c: " << endl;
+	  cin >> c;  
+	  if  (((b*b)- (4.0*a*c)) >= 0.0)
+	    {     float x1,x2;
+	          cout << " las raices de la f(x) son reales: " << endl;
+            x1 = (-b + sqrt(b*b - 4.0*a*c))/(2.0*a);
+            x2 = (-b - sqrt(b*b - 4.0*a*c))/(2.0*a);
+            cout << "x1: " << x1 << endl;
+			      cout << "x2: " << x2 << endl;
+        }
+    else
+	    {   
+			      cout << "las raices de la f(x) son imaginarias:\n";
+            re_x1 = -b/(2.0*a);
+            re_x2 = -b/(2.0*a);
+            im_x1 = sqrt(-b*b + 4.0*a*c);
+			      im_x2 = sqrt(-b*b + 4.0*a*c);
+            cout << "x1: " << re_x1 << " + " << im_x1 << " i " << endl;
+            cout << "x2: " << re_x2 << " - " << im_x2 << " i " << endl;
+}
+getch();
+} 
+
